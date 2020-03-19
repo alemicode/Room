@@ -18,6 +18,7 @@
         android:gravity="top|left"
         android:layout_below="@+id/edt_title"
         android:hint="Note"
+        android:id="@+id/edt_note"
         android:layout_width="match_parent"
 
         android:inputType="textMultiLine"
@@ -25,7 +26,7 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

@@ -1,8 +1,10 @@
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
+
 
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
@@ -17,6 +19,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+
     }
     buildTypes {
         release {
@@ -27,7 +32,7 @@ android {
 }
 
 dependencies {
-    def room_version = "2.2.4"
+    def room_version = "2.2.1"
     def nav_version = "2.3.0-alpha03"
 
 
@@ -45,9 +50,11 @@ dependencies {
     //Room persitance library
 
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
-    // For Kotlin use kapt instead of annotationProcessor
+//    kapt "androidx.room:room-compiler:$room_version"
+//    // For Kotlin use kapt instead of annotationProcessor
 
+    implementation 'androidx.room:room-ktx:2.2.1'
+    kapt "androidx.room:room-compiler:2.2.1"
 
     // navigation component using kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"

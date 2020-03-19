@@ -5,6 +5,11 @@ import android.os.Bundle
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.example.r.R
+import com.example.r.db.NoteDataBase
+import com.example.r.db.Test
+import java.util.concurrent.locks.Lock
+import java.util.concurrent.locks.ReentrantLock
+import kotlin.concurrent.withLock
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,11 +19,14 @@ class MainActivity : AppCompatActivity() {
 
         val navController = Navigation.findNavController(this, R.id.fragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
+
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
         return NavigationUI.navigateUp(
-            Navigation.findNavController(this, R.id.fragment),null
+            Navigation.findNavController(this, R.id.fragment), null
         )
 
     }
