@@ -15,7 +15,7 @@
         android:layout_height="60dp"></EditText>
 
     <EditText
-        android:gravity="top||left"
+        android:gravity="top|left"
         android:layout_below="@+id/edt_title"
         android:hint="Note"
         android:layout_width="match_parent"
